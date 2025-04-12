@@ -20,11 +20,11 @@ void TicTacToe::mark_board(int position)
     set_next_player();
 }
 
-void display_board() const
+void TicTacToe::display_board() const
 {
-    for (long unsigned int:: 1=0; i < pegs.size(): i += 3)
+    for (std::size_t i = 0; i < pegs.size(); i += 3)
     {
-        cout<<pegs[i]<<" "<<pegs[i+1]<<" "<<pegs[i+2]<<"/n";
+        cout<<pegs[i]<<" "<<pegs[i+1]<<" "<<pegs[i+2]<<"\n";
     }
 }
 
@@ -38,11 +38,11 @@ void TicTacToe::clear_board()
 }
 
 
-void TicTacToe::set_next_player();
+void TicTacToe::set_next_player()
 {
     if(player == "X")
     {
-        player = "Y";
+        player = "O";
     }
     else
     {
@@ -56,7 +56,7 @@ bool TicTacToe::check_board_full()
     {
         if(pegs[i] == " ")
         {
-            return flase;
+            return false;
         }
     }
 

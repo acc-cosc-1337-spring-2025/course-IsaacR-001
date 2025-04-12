@@ -3,7 +3,7 @@
 #include<iostream>
 #include<string>
 
-using std::cout; using std:cin; using std::string;
+using std::cout; using std::cin; using std::string;
 
 int main()
 {
@@ -25,7 +25,7 @@ int main()
             cout<<"Enter a position: ";
             cin>>position;
             game.mark_board(position);
-            game.display_board():
+            game.display_board();
 
         }
         
@@ -33,7 +33,7 @@ int main()
         cin>>user_choice;
 
             
-    }while(user_choice == 'y' \\);
+    }while(user_choice == 'y' || user_choice == 'Y');
 
     
 }
