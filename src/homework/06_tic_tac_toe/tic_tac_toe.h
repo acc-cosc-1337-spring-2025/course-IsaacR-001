@@ -1,4 +1,3 @@
-//h
 #include<iostream>
 #include<string>
 #include<vector>
@@ -13,14 +12,19 @@ public:
     void mark_board(int position);
     std::string get_player() const{return player;}
     void display_board() const;
+    TicTacToe(int size) : pegs(size*size, " ") {}
+    
+protected:
+    std::vector<std::string> pegs;
+    virtual bool check_column_win();
+    virtual bool check_row_win();
+    virtual bool check_diagonal_win();
+    
 private:
     std::string player;
-    std::vector<std::string> pegs{9, " "};
     void clear_board();
     void set_next_player();
     bool check_board_full();
-
 };
-
 
 #endif

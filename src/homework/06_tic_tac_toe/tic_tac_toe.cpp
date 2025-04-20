@@ -1,4 +1,3 @@
-//cpp
 #include "tic_tac_toe.h"
 
 using std::cout;
@@ -37,7 +36,6 @@ void TicTacToe::clear_board()
     }
 }
 
-
 void TicTacToe::set_next_player()
 {
     if(player == "X")
@@ -61,4 +59,19 @@ bool TicTacToe::check_board_full()
     }
 
     return true;
+}
+
+bool TicTacToe::check_column_win()
+{
+    return false;
+}
+
+bool TicTacToe::check_row_win()
+{
+    return false;
+}
+
+bool TicTacToe::check_diagonal_win()
+{
+    return false;
 }
